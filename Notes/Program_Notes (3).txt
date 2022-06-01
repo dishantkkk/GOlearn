@@ -1,0 +1,1198 @@
+RESTful Architecture --> API's --> JSON
+
+JSON --> JavaScript Object Notation
+YAML --> Yet Another Markup Language
+
+XML --> JSON or YAML :: Interoperable Technologies
+
+Microservices Architecture (MSA)
+
+Pub-Sub Model : API's + MSA
+
+Intro to GoLang
+
+--> This is NO ppt program
+--> Interactive : QnA
+--> Ecosystem of the language : Libraries + Packages + Frameworks + Toolchains + Test Environment 
+--> Developers Productivity : Tools in GoLang + IDE [Notepad++/VSCode/GoLand]
+
+GoLand - JetBrains 
+
+
+
+a. Creating the projects
+b. Manage the code bases
+c. Plugins available :: 
+d. Better bug/changes management
+e. Tools --> SCM [Github]
+
+Dev Code --> Test Code ::
+
+Angular/React :: Jasmine JS + Protractor JS
+SpringBoot : Junit/TestNg [Unit testing + Integration Testing] + Mockito [Mocking Framework]
+
+Karma - Test Runner
+
+GoLang Test --> GinkGo
+
+GoLang <Test> Go Test [unit test]
+
+--> Go :: Data Stores :
+
+a. Structured
+b. Unstructured 
+
+Types of stoarges :
+
+a. RDBMS
+b. NoSQL Data stores : MongoDB/Cassandra
+c. Object cache/In-memory caching
+d. File based storages [Amazon Web Services (AWS) - S3 [Simple Storage Services]]
+
+DynamoDB : NoSQL database written by AWS 
+
+--> Serverless Deployment :: AWS --> Lambda
+
+1. Self learning content :: Regular basis
+2. Assignments :: Regular basis 
+3. Create a group of 2-3 pax (you can select your group) :: 24th May 2022
+
+O'Reilly
+
+OSCON
+
+Concurrency in Go :: Concurrency Model
+
+Scaling :: App --> Infra --> Codebase [Program :: efficient]
+
+Good programming vs Efficient Programming
+
+Measure the efficiency of a program :
+
+Level 1 : Complexities : Tools
+
+a. Space complexity
+b. Time Complexity
+
+Level 2: Heap Stacks 
+
+a. Memory Management - Automated or Manual
+b. Garbage Collections : Alloc/Dealloc
+
+Level 3: Static Code Analysis + Load/Perf test
+
+Garbage Collection/Memory Management (MM) : Code Profiling 
+
+a. C/C++ : Manual 
+b. Java : GC --> Automated [Java 1.8 vs Lower versions of Java than 1.8]
+c. Go : One of the most preferred Memory Management System :: Well defined GC
+
+Go or GoLang :: GO  [golang.org] vs go.dev
+Go --> 2009 [Ruby/Python/C/C++] :: Backyards of Google [internal/Glue Languages] 
+2009 --> 2012/2013 : Google
+2013 --> Open Source Community 
+
+Glue Language :: Google Earth : NOT using a single language to solve all the problem statements/use cases
+
+Google Earth :
+
+a. Map engineering : KML [Keyhole Markup Language]
+b. Storing the navigation data : MongoDB + Perl
+c. Multi-processing support : Rust/Scala/F-sharp (mainstream languages) 
+
+a. Github Account
+b. Git local machine
+
+java -version : 1.8/18.x or above
+
+GoLang --> Go [SDK] --> free and open source
+GoLand --> IDE --> 30-day free trial from JetBrains + Paid version
+
+The path to install :: > Windows :: C:/Program Files/Go
+
+- Download the SDK of Go :: MSI
+- Install Go
+- Close the CMD + Re-open the CMD
+- go version
+
+Postman :
+
+a.Installer
+b. Browser Plugin
+
+Install Go in local machine - by EOD today to be installed
+
+11.28am 
+
+Go or GoLang :: GO  [golang.org] vs go.dev
+Go --> 2009 [Ruby/Python/C/C++] :: Backyards of Google [internal/Glue Languages] 
+2009 --> 2012/2013 : Google
+2013 --> Open Source Community 
+
+Go : Can I have access to the code base? Can we compile the Go source code from scratch? 
+
+Open Source Project --> Compiled the source code of the project from scratch 
+
+https://protect-eu.mimecast.com/s/v61jCJPvnhAQNq8hmYSWQ?domain=github.com
+
+- Whether you can build from Windows/Linux env 
+- Linux env :: Free AWS --> Linux instance (Ec2 : Ubuntu/RedHat/Amazon Linux) :: Go from source
+
+https://protect-eu.mimecast.com/s/URwYCK6wouMrV2qTyD7sG?domain=go.dev
+
+What is the programming style & paradigm for Go? 
+
+Programming Paradigms : How does the programs deal with execution model [sequence of operations/steps; way the code is organized; grouping of the code units; state of the code of a language:
+
+What can be the most common programming paradigm :
+
+1. Imperative style of coding : 
+
+- Procedural
+- Object Oriented
+
+programming language :
+
+a. Paradigm
+   a.1 Imperative
+	a.1.1 Procedural
+	a.1.2 OOP
+   a.2 Declarative 
+	a.2.1 Functional
+	a.2.2 Reactive
+	a.2.3 Logic cycles
+
+Go :: What is the programming paradigm it uses : Multi-paradigm + Object Oriented + Concurrent Imperative
+
+Go :
+
+a. Supports multiple programming paradigm : Code is developed/organized + Execution Model works can vary depending upon the end goal to be achieved
+
+C/C++/Java :: Hello World :: define the class,function,call a system function
+Ruby/Python/Scala/Go : Multiple styles for writing the same Hello World program :
+
+a. OOPs way
+b. print "hello world"
+
+C/C++ vs Java :: OOPs vs Functional || Introduce members in the class/functions :
+
+--> Java/C++/C : Statically typed language :: Design/compile time
+--> Ruby/Python/Perl/Scala : Dynamically typed language :: Design/compile + Run time 
+
+Go :: Feature :: Static Language
+
+Go :: Statically Typed Language ::
+
+- Type Safety : Static Type Checking
+- Minimal implementation of type safety checks
+- Defined Data Types 
+
+Imperative + Declarative
+
+Go : OOPs
+Go : Functional Style + Reactive 
+
+What is the Go version : 
+
+a. Latest : Go v1.18
+b. Good support :: Backward Compatibility
+c. Which is the Go version to work with?
+
+Check : go version
+
+- What are the OS that Go supports (& what are the best versions) :
+
+a. *nix - FreeBSD, DragonBSD, NetBSD
+b. MacOS
+c. Windows 
+
+- Thumbrule :: Go :: Staging env + Prod env :: *nix
+- Dev env : Windows
+
+Go : Open Source [63 types of licenses] : 3-clause BSD 
+
+Why Go :
+
+- Simplicity or Simplicity - Sugar Syntax [define/declare/design the code]
+- How well the keywords are defined (Scala : acute complexities) : Go --> 27-28 keywords
+- Go :: Picked the troubles of C/C++ + Python
+
+C\C++ : Go --> better memory management (MM)
+C/C++ (MM/member scope/lifecycle/allocs/dealloc) : MM has to be done manually || Go -- > Well defined GC
+
+--> Memory
+--> Flush
+--> DOM/POM
+--> .close()
+--> .exit()
+
+Poor MM --> Security Vulnerabilities 
+
+Security Vulnerabilities :: CIA Triad
+
+C - Confidentiality
+I - Integrity
+A - Availability
+
+--> Go :: Compiled Language :: C/C++
+--> Go :: Compiled like C/C++ BUT has similarities with Python 
+
+Compiled vs Interpreted 
+
+dibya@ecdzone.com
+
+1. Finish Go installation : go version
+2. Compiled vs Interpreted language
+3. Static Type Checks :: Static Language vs Dyanmic Language :: Java vs JavaScript
+4. Free account : github.com
+5. Git client in your local machine : git --version : Github Account + Git Client
+
+https://protect-eu.mimecast.com/s/kBQDCLPxphwY6RPcGK3ed?domain=git-scm.com
+
+25/05 --> All code bases, practice/assignments --> Git repo
+
+Local Repo [local device] --> Remote Repo [github repo] --> Sharing the repo
+
+Free Github Account :: Repos --> public :: <abstract name> 
+
+Movers & Shakers
+
+https://protect-eu.mimecast.com/s/RgWhCM9yqUk6Nq5T4kpWj?domain=martinfowler.com
+
+-> Agile in Enterprise
+-> Test Driven Development (TDD)
+-> Behavioral Driven Development (BDD) 
+-> Design patterns
+-> CI/CD
+-> MSA
+
+
+Authors of Go:
+
+--> Robert Greissmer
+--> Rob Pike
+--> Ken Thompson
+
+Roy Fielding : Author of the PhD Dissertation [2001] :: Concept of REST Architecture 
+
+Go ::
+
+- Features of Go 
+
+Go Doc : https://protect-eu.mimecast.com/s/V4ACCN8zrsPM40NTxUkBn?domain=go.dev
+
+Go Packages : https://protect-eu.mimecast.com/s/MnYICOZAvsZ2WpATXkGuP?domain=pkg.go.dev
+
+Go --> Hello World 
+
+-> Notepad++
+-> directory :: dump all the practice
+-> cmd : run the code
+
+Go code --> C
+
+fmt - packages
+
+Program :: members : classes/functions --> structure/reusability/external :: grouping of the functions/members
+
+Style of writing :
+
+- Syntax sugar : Inspiration from C
+- Code concise + readable : Simplicity
+- remote or the different package management :: Go code 
+- Go compile
+- Flexibility 
+- Go : EOL is NOT compulsory
+- EOL feature : ; [C/C++/Python/Common Sense] 
+- Go is a case Sensitive Language : member names :: fmt vs Fmt
+- Exported Members : Capital Case
+- How to deal with Exception Handling :: Compiled language :: errors vs exception 
+
+go run <file name> 
+
+
+- "fmt" --> "FMT" :: works 
+- What is the definition of the package FMT? :: Where to get the details of FMT package
+
+Go :: Packages :
+
+a. Core to the design principle of Go
+b. Types : Go defined packages + custom defined packages
+c. The packages are distributable
+
+"fmt" - core packages in Go. I/O operations
+
+--> Where can we see the list of CMD commands?
+--> From Where is "go" getting invoked? 
+
+go help
+
+--> Go Docs
+--> CMD : go help 
+
+To execute a command/function from CMD : go <command>
+
+go help --> display the list of commands & doc topics
+
+go help <command> --> displays the details about the specific command/topics
+
+go list :: display the list of packages or modules that we are using in our working directory
+
+cmd --> go list --> Searching for a file called "go.mod" 
+
+nodejs :: package.json :: project env :: Node version + packages + versions of the packages + dependencies
+
+go mod init <module name> 
+
+Go : go.mod file [module paths] :: At the root of my working/parent directory 
+
+Initialize the app/project/codes :: go.mod
+
+go list [list :: list the packages]
+
+go.mod :: Reside --> a. Local Machine b. Main branch of my Github/SCM repo
+
+- Can we multiple modules defined in the same go.mod file? If yes - how [syntax]; if No - how to define multiple modules
+
+- How to modify/reload with changes for a go.mod file using the cmd
+
+From Where is "go" getting invoked? : C:\Program Files\Go\bin
+
+pkg --> packages :: available in a specific Go SDK version --> package definition from Go
+
+API's --> Each version has it's packages defined --> Multiple methods/calls 
+
+Analogy :
+
+Amazon : Some common functions [payment gateway] + product catalogued/display [different]
+
+-> Mobile app 
+-> Mobile website
+-> website
+-> Gear app 
+
+API's --> Each version has it's packages defined --> Multiple methods/calls  :: API-first Design
+
+Go internal design principle :: API-first design 
+
+11.27am 
+
+hello.go code :
+
+a. Called a package
+b. Called a Go package : fmt
+c. funct : main()
+d. IO
+
+https://protect-eu.mimecast.com/s/IixyCPYBwIN5pK4TvDI1m?domain=rsc.io : Pithy Sayings
+
+print :: I/O --> Go :: "fmt" package
+
+go get <calling a package> :: parent directory :: if go.mod is available :: update go.mod :: Inherent intelligence of Go language
+
+checksum algorithm :: Go - go.sum file - working on an authentication modules
+
+SQL Injections/Dirty Injections/Cross-site scripts
+
+https://protect-eu.mimecast.com/s/IixyCPYBwIN5pK4TvDI1m?domain=rsc.io : author of the program (implementing the quote functions) or the end users knows :: any challenges/issues ? 
+
+
+Internal module :: Authenticating module :: part of Go SDK
+
+Authenticating module :: part of Go SDK :: sum.go file :: Checksum algorithm
+
+go mod init <module path> 
+
+go mod tidy : new dependencies/package calls needed based on the changes in my directory, it will fetch the updates & publish the updates in go.mod file
+
+Simple but effective tools with Go ecosystem :
+
+https://protect-eu.mimecast.com/s/61g9CQODxulN0k6C2j_3a?domain=goplay.tools : Playgrounds 
+ 
+Python :: Indentation 
+
+Code reviews :
+
+a. Use Go style of coding as much as possible
+b. Write Go style and NOT C/C++ style
+
+Lint/Linting Tools : Across all programming languages
+
+a. Code follows the right guidelines/coding standards
+b. How efficiently the members are utilized
+c. Calls are made to external dependiences
+d. Documented
+e. Right versions of the packages/functions
+
+Go --> Strict typing :: variable types
+
+Strict typing :: C/C++ 
+
+Go Flexibility :: Depending on the type of declaring the variables, types "may be" avoided :: Dynamic Programming Language [Python]
+
+--> Data Types in Go : 3 basic types used in Go :
+
+a. Numeric Type :
+
+int8/16/32/64
+
+uint8/16/32/64
+
+float32/64
+
+complex64/128
+
+b. String Type - All the different operations :: Concatenation/extracting
+c. Boolean Type - True or False
+
+How do we define variables in Go :
+
+var <variable_name> <type> 
+
+var <variable_name> <type>  = value
+
+var b int
+
+// Single line comment
+
+/* Multi line
+comment line 1
+comment line 2
+*/
+
+Microservices :
+
+Java --> SpringBoot
+C# --> https://protect-eu.mimecast.com/s/vrpxCRLEys0g2vrtRYLpv?domain=asp.net
+NodeJS --> Moleculer 
+
+Microservices Architecture :: Solution Design :: Ready framework/library :: Required Microservice Hooks that are present
+
+Go :: 
+
+a. Go Kit : https://protect-eu.mimecast.com/s/-KtRCVNLDhkPGxlT0i8Lm?domain=gokit.io
+b. Gin
+
+Core Concepts of Microservices Architectures (MSA) :
+
+1. Divide the use cases into a proper size for better MSA implementation : Sizing of the use case
+
+Rock (Monolithic) --> MSA (pebbles) --> Grains [over engineering --> maintenance]
+
+Login service : 
+
+a. S1 v1/v1.1 : User & Passwd
+b. S2 : Hash algorithm 
+c. S3: Forgot passwd
+
+2. API Gateway [request from interfaces --> back-end + request --> transformed; rate limiting [concurrency]
+
+3. Service Discovery :: Service Registry
+
+Netflix : Monolithic --> Microservices Architecture :: Toolchains --> Open Source
+
+Netflix : 4500-5000 services 
+
+4. Health Check Tools 
+
+5. Design Patterns that we use in MSA architecture
+
+Good resources to read about MSA :
+
+https://protect-eu.mimecast.com/s/IDIvCW8MEsXyJ5ju8fp3_?domain=microservices.io
+
+Reference Link :
+
+https://protect-eu.mimecast.com/s/0fyfCXMNGsDMwXnfnMK_b?domain=agiratech.com
+
+https://protect-eu.mimecast.com/s/AumrCYMOJsp6rL3c8Ivwc?domain=github.com
+
+Monkey Testing/Engineering : https://protect-eu.mimecast.com/s/NT_LCZWPKs8oJ5MFn0nID?domain=github.com
+
+Go program :
+
+a. Initialized the Go.mod file 
+b. Developed the package-call.go file 
+c. go mod/ go get :: Fetched the package : "https://protect-eu.mimecast.com/s/IixyCPYBwIN5pK4TvDI1m?domain=rsc.io"
+d. Go.mod file updated :: go mod tidy
+e. Go : Authentication modules : Checksum algorithms : go.sum
+
+Variables | Data Types | Basic data types 
+
+Type checking feature : Go :: Dynamic [Ruby/Perl/Python/Go/etc]:
+
+a. Type definition is NOT compulsory
+b. Variables can hold data depending on the use case
+c. What is this style of implementation : Duck Typing
+d. Disadvantage of Duck Typing/Type Inference : Flexibility
+
+a=10
+a="hello" 
+
+Type that the variable should be holding :: Data --> depend upon the implementor :: Scope of the variable + utilization of the variables + passing the values/data --> some other upstream/downstream feeds
+
+Go style guides : Coding guidelines :: 
+
+-> Strict Type Checking or Dynamic Style
+-> AND vs OR
+
+Go : Declaring/Defining :
+
+a. var <variable_name> <type>
+b. var <variable_name> <type> = value
+c. var <variable_name> = value
+d. var <variable_name1> = value1,value2
+
+e. <variable_name> := <value>
+
+Go :
+
+:= 
+
+--> It cannot be used to assign a value to a variable which has been already declared.
+
+:= :: Int --> Float (duck typing ) cannot use 10.01 (untyped float constant) as int value in assignment (truncated)
+
+Go :: Constants : Keyword : "const"
+
+Go : keyword (const) :: Once the variable is defined as a constant :: cannot the value
+
+Go : const :: Both undefined & defined types for the variables
+
+
+Loops in Go : iterative :: "for" loop
+
+1..4
+
+Loops in Go : conditional :: if-else loop :: Only "If" works
+
+if {
+
+} else {
+
+Go : Loops :: Conditional loops :: C/C++ :: switch - case
+
+Javascript code :: a = 10 (int); b = 10.5 (float)
+
+Go :: There is NOT much support available for implicit type conversions.
+
+Go :
+
+a. How will it hold multiple elements of similar type + sequence + fixed size: Arrays 
+
+var <array_name> [size] type
+
+Index size starts from :: 0 to size-1
+
+Go --> Array --> Slice & Append 
+
+Go --> Arrays :: Dynamic Mem Allocations
+
+11.45
+
+Slice --> Segment or portion of an array
+Each element of the slice can be accessed using the Slice Name & Index Number
+Length of the array cannot be modified BUT size of the slice can be changed
+
+Declaring the slices in Go :
+
+var slice_name [<size>] type = <array_name>[start:end]
+
+//... in Go :: the elements/content from the variables being use 
+
+"..." called as : Ellipsis
+
+"..." (Ellipsis) :: Used with Variadic functions
+
+Better and smarter memory management : Elasticity 
+
+
+1. Utility of ...
+2. Utility of Variadic functions
+
+When do we use Variadic Functions :: Function calls thar are made with varying numner of arguments
+
+args :: 0 to any of the numbers: args size that is defined
+
+
+Memory elasticity / squeezing and expanding memory management :: Compiler/GoRoutines/GC - Mem Allocs/Dealloc
+
+array : with or without size 
+defining the slice : no size defined [size : dynamic] :: referencing the array [range]
+appending the slice :: any variable to hold the slice value 
+
+Can we use Variadic Functions in Java/C++/C?
+
+Mathematical Functions :: math package
+
+Randomizers : From a stack[range/limit] :: pick any random numbers 
+
+Go : Math + Randomizers 
+
+
+https://protect-eu.mimecast.com/s/e51KC19KoUBEVMpFRUjOX?domain=pkg.go.dev
+
+--> Concurrency vs Parallelism
+--> Installing Go from Source? 
+--> ORM [Object Relational Mapping] :: ORM Library
+--> REST & API's : Main concepts 
+
+Java/SpringBoot :: ORM implementation :: Hibernate
+Ruby on Rails :: ORM is implicit
+GoLang : GORM
+
+--> REST API : Endpoints
+
+Concurrency : https://protect-eu.mimecast.com/s/aOooC29LpUZEMpkTrMj5L?domain=golangprograms.com
+
+Go : Concurrency & Parallelism :
+
+- GoRoutine
+- Channel
+
+Clean Architecture & Go : https://protect-eu.mimecast.com/s/SaseC39MqU9RnpmTlEua_?domain=itnext.io
+
+Assignments from Day 1 - Day 3: Github account :: Email Dibya your Github repo link
+
+Example links from Github : https://protect-eu.mimecast.com/s/FrDVC49NrU97XBJTrP3dK?domain=github.com
+
+https://protect-eu.mimecast.com/s/IstYC5WOvspWBZ0c7_c6Y?domain=github.com
+
+Clean code + efficient code [code that is performance friendly : hyper scaling/scaling-in/out] : Benchmarks standards 
+
+Code Ship : Code ready to be shipped : 3 aspects of the code :
+
+a. Development code is ready 
+b. Test code is ready and available & also checked against the development code [CI process]
+c. Tech documentation for the code/business use case 
+
+CI/CD : Local repo --> Staging/Pre-prod env
+
+for {
+	}
+
+Loop runs infinitely :: There is no <kill> or <terminate> option available 
+
+Refactoring :: we can introduce <timeouts> 
+
+Compile/run the program : <run> or <kill>
+
+Go : Functions :
+
+a. Block of statements - specific tasks
+
+Syntax : Declare a function
+
+func function_name(parameter_name1 type, parameter_name2 type,..)
+return_type {
+
+//statement
+
+}
+
+Parameters/Return types :: Optional 
+
+System defined interfaces : declare, however, the body can be overriden depending on the implementation + Declarative Style (Programming Paradigm) + Static Typing
+
+have() - values
+want() - return types
+
+cap()
+
+slice : length & cap
+
+length of a slice : Number of elements the slice contains
+Capacity of a slice : Number of elements present in the underlying array
+
+Slice :: Nil value :: length and capacity would be 0 
+
+- define a main() func 
+- define an array int[]
+
+a. print the array
+- create a slice : any range
+b. slice the array : return the 1st element of the slice
+c. extend the length of slice
+d. drop the first 2 elements from the slice
+e. print the slice - print the slice/length of slice/capacity 
+
+Go : keyword :: defer
+
+Wait Concept :: Till other conditions/blocks/statements aren't executed., we would want for specific code blocks to be executed
+
+explicit timeout(): memory management challenges
+
+Go : defer keyword/statement
+
+defer :
+
+- delaying the execution
+- delay the execution :: statement/function/method level
+- delayed until the nearby func returns
+
+"non-declaration statement" outside function body
+
+defining the function :: declarative statement
+non-declarative statements :: while making the calls
+
+defer keyword: expression in defer must be function call/method call
+
+Loop : defer :: How the stacks are called :: Is it LIFO/FIFO/nothing?
+
+Deferred in the loop being executed :: LIFO format
+
+Try using while loop : 1-10 : deferred 
+
+C/C++/Python : In case of Go, we DO_NOT have "while" implementation
+
+while?
+
+do-while?
+
+--> Defer keywords/statement : the arguments are evaluated whenever the defer statement is executed amd NOT when it is called.
+
+Common use cases :: to use Defer : 
+
+a. Assets connections being closed [files/connections/scope of variables]
+b. Clean-up activties
+c. loop in my program --> behavior/execution strategy for unknown situations :: high hits :: catching the panics 
+d. Multiple processes :: Concurrency --> GoRoutines/Channels :: multiple processes :: close the processes (if the scope is over) 
+
+Pointers : Go 
+
+C/C++ : Pointer Arithmetic : Allowed 
+
+increment/decrement/addition/subtraction/comparison/etc
+
+--> pointers : contains the address
+--> arithmetic operation : performed on the pointers
+--> result :: pointing on the pointers
+
+
+Go : Pointers :
+
+a. Store the memory address of another variable
+b. Pointers are also referred as special variables
+c. Pointer variables --> store the data at a specific memory address :: better memory management perspective 
+d. Pointers : *
+e. Go --> There is NO support for Pointer Arithmetic
+
+Type : *x --> pointer to a X value
+
+var *x int
+
+& -> operator :: generate a pointer to the operand 
+
+Derefencing (pointers) :: Trying to access or change the data that is present in the memory location :: doing by using a pointer
+
+Dereferencing :: Multiple memory lookups
+
+Pointers :: better memory footprint :: round trips for memory lookup, dereferencing is faster :: doesn't checks the variable but the pointer --> memory location
+
+Use cases for pointers :
+
+a. Large data set [data :: variable values OR container] : multi-variant :: Go --> containers :: structs
+
+b. Load the data from struct --> variable values :: GC :: large data set (overhead) 
+
+c. Pointers --> Mutability [pass-by-value] : variables vs pointers
+
+Mutate a variable --> passing to a function [passing-by-value] :: changes that are made --> work with that copy : Pointers
+
+Can there be a use case : How Pointers in Go can assist in API's
+
+What are struct/Structures in Go?
+
+- User defined data-types
+
+- User defined data-types : hold homogenous as well as heterogenous
+
+- Elements : same-type or different type
+
+- Student : name, age : array / structure 
+
+- structure :
+
+structure name 
+
+var1 var_types
+var2 var_types
+
+- define a structure
+
+type struct_name struct {
+
+variable_name1 variable_type1
+variable_name2 variable_type2
+
+}
+
+type student struct {
+
+name string
+age int
+address string
+
+}
+
+
+struct :
+
+a. Create a struct employee : properties : name (string), age(int), address(string)
+b. func : hold the employee type + print the emp_name property
+
+c. main() --> declare the variables :: emp name, address, age 
+
+inside :: variable :: hold the employee data 
+
+struct emp 
+
+var emp1 emp
+
+d. Define the data for 3 set of employee : e1..e3
+
+e. display a specific emp data
+
+Structs -- literals
+
+too few values in struct literal
+
+all the values in struct, it compulsory to use them? 
+
+- whatever the struct values being defined, needs to implemented
+
+- struct values :: to be used in all the variables being called
+
+- "null: is undefined
+
+-----> In a a struct, is it possible to have non-mandatory variables or null variables
+
+11.58am
+
+Using packages that are defined by Go
+
+Custom Packages in Go
+
+--> Create a package : How 
+--> Package would be made available : 
+--> How to use the package
+
+Package is to be referenced :: PATH variable 
+
+%GOROOT%
+
+Windows env --> package --> path variable 
+
+echo $path : linux/mac
+
+Goroot - where the Go SDK resides; need not be touched
+Gopath - defines where the current workspace is
+
+go env <GOROOT> OR <GOPATH>
+
+Goroot --> where the SDK is present
+
+creating the package: GOROOT :: SDK
+
+- Created the package
+- Placed the package inside the GoRoot path 
+- Implement the package in a function
+
+go install
+package mypackage1
+        imports mypackage1: import cycle not allowed
+
+--> GoLand? :: IDE : Not available
+
+--> AWS : free account created? :: Serverless --> Lambda
+
+
+aws.amazon.com
+https://protect-eu.mimecast.com/s/JYPUC60PwI0G5rotP7Brz?domain=aws.amazon.com
+
+All the assignments till today --> Github account --> share the repo : EOD
+
+--> Calling the package 
+--> Using the package
+
+--> Define the package
+
+--> Where to place the files :
+
+--> package_example.go : main() : any location
+
+--> calci.go : where the definition of package is available : Program Files/Go/src/<calculation>
+
+
+
+Go : environments :: GoRoot & GoPath
+
+GOROOT : C:/Prog Files/Go --> /src : package codes would be present :: within a folder with the same name as that of a package
+
+https://protect-eu.mimecast.com/s/PBAzC7AQxiVWDAmUDt8Uf?domain=jogendra.dev
+
+1. Scenario 1: Cycle of dependency :: How to resolve & how to make the calls [2 packages vs 3 packages]
+
+a. https://protect-eu.mimecast.com/s/PBAzC7AQxiVWDAmUDt8Uf?domain=jogendra.dev
+
+2. Scenario 2: Push the code [create the package] in Github --> Go install + Structure of the package in your local machine
+
+Package code: p.go --> /src 
+Main code : m.go --> /sample_gocode 
+ 
+Circular dependencies/Cycle of dependency :
+
+--> Bad for performance
+--> Poor depedency management
+--> Poor and slow builds
+
+DAG [compiler designs/programs flow is considered/data engineering;large datasets/Big data :; control flows associated with data] : Directed Acyclic Graph :
+
+a. Compiler Design
+b. Visualizes the flow of basic blocks in the programs
+c. Within the blocks --> optimization techniques
+d. Type of data structure being used and use the transformations available within the blocks
+e. How the expressions/sub-expressions/how the statements
+
+Sub-expressions : C/C++/Rust/Perl/Python/Go
+
+- Expression within an expression 
+- Common implementations :: Regex [regular expressions]
+
+struct in Go? 
+
+dot philosophy
+
+Go :: supports the dot philosophy
+
+assign/override/fetch 
+
+= & :=
+
+Duck Typing
+
+Map in Go 
+
+Go : Map variable : var map_variable map[key_data_type]value_data_type
+
+ countryCapitalMap = make(map[string]string)
+
+what is "make" : do a dynamic allocation with nil/no values
+
+S3 :: In case of Map, is it possible to assign values (nil or zero or filled) without using "make"
+
+range function 
+
+https://protect-eu.mimecast.com/s/tUv2C89RyUPwo6jTqLC8T?domain=gobyexample.com
+
+Range :
+
+a. Can work with multiple different types of data structures
+
+b. Work with both arrays & slices
+
+c. Range works with maps [keys & key-values]
+
+Go --> rather using the traditional "for" loops, better style is to use "range" & maps
+
+Map & Range
+
+List of students : 
+
+1. Name_of_student Age_of_Student
+2. Create the map  : enter 3 set of values
+3. Check for the age of the 4th student :: verify if the age is greater than or less than 15
+
+- Declaring and defining the map
+- Inserting the map key-value pairs
+- Iterating over the map KV's
+- Delete the KV's 
+
+Go --> Map is considered as a data struc
+
+How to update a map entry :: key-value? 
+
+K-V pairs :: KV pair that is unique :: CRUD methodology
+
+--> Key updated 
+
+OR
+
+--> Value updated
+
+
+Delete Sumit entry or Update the name : Sumit to Madhu
+
+Madhu  - 90
+Dishant - 85
+
+S4 : Delete a key, enter a new map element and update an exisisting value of a key + Have a map "specific element/key " with a constant value (check) ? 
+
+Pass1 :
+Initial : K1...K5
+Delete : K1 
+Create : K6
+
+k4-"india" :: this value cannot be modified
+
+Pass2:
+
+K2 - "hello"
+Update k2 - "Brillio"
+
+Parallelism vs Concurrency vs Distributed [resources - computational/storage that are spread across geographically distrubuted DC's] 
+
+lesser infra : Concurrency : 2 or more actions can be supported(computed) in progress at the same time 
+
+higher infra : multiple cores : Parallelism : 2 or more actions being executed/running simmultanesouly
+
+Computational tasks :: blocks/statements/loops/expressions/resources
+
+Go Lang : Concurrency :: GoRoutine
+
+https://protect-eu.mimecast.com/s/MQuWC92VzuNYGkmTXCMLC?domain=golangbot.com
+
+GoRoutines and Channels 
+
+11.52 :: Go & HTTP : get/post
+
+Who all has worked with server-side in the past?
+
+a. Web Apps
+b. Different packages available to work wiyth Go for networking/protocols/html pages/templates/errors/request-response model
+
+c. Go light-weight :: Design and create a web server
+d. Web or HTTP :: How to work with HTTP/HTTPS verbs
+
+--> HTTP/HTTPS verbs : REST Architecture : 7 verbs : get/post/put/delete/patch/options/head
+
+Request - Response model : client-server
+
+get/put/post :: Wrt the server
+
+--> get verb [concept : request --> requesting the server] : https://protect-eu.mimecast.com/s/kX7PCymK4I2yxrNSN8CJL?domain=brillio.com
+
+Getting/fetching/retrieving the content present in Brillio.com site
+
+--> post verb  : writing to the server [creating a new user : <entering a data set : different values; user name, password, name, address]
+
+--> post verb : pass the user name & password to the server side [https://protect-eu.mimecast.com/s/ATwTC09JnUgr1G2FEXn8_?domain=gmail.com] validation
+
+Fetching the content OR passing the content/values/arguments
+
+What are the major placeholders of this content : http/https : format :: <header> or <body>
+
+<header>
+-> Senders and receivers address
+-> encryption/packets/protocols/http clients
+</header>
+
+<body>
+-> html/json/xml
+-> button/text/label
+</body>
+
+Request - Response Model (theory) :: http/https:  Communication Architecture (REST) :: http/https verbs [get/post/put/delete] --> packet transfers [<header> + <body>]
+
+https://protect-eu.mimecast.com/s/hvqSCgklqfwYMAlcRUn8z?domain=go.dev
+
+Java : Network :: java.net
+
+Go :: Provides some packages :: net/http package
+
+https://protect-eu.mimecast.com/s/MnYICOZAvsZ2WpATXkGuP?domain=pkg.go.dev/
+
+1 resp, err := http.Get("https://protect-eu.mimecast.com/s/UezzCjnowuGyWnjuNfRlB?domain=example.com")
+...
+2. resp, err := http.Post("https://protect-eu.mimecast.com/s/0lTWCkopxsXqxOnuBZn3U?domain=example.com", "image/jpeg", &buf)
+...
+3. resp, err := http.PostForm("https://protect-eu.mimecast.com/s/6CQJClpqysPzQ2oT3UVo8?domain=example.com",
+	url.Values{"key": {"Value"}, "id": {"123"}})
+
+-> http package :: http client-server implementation
+-> requests/response can be made :: standard HTTP verbs [Get/Post]
+
+Request - response :: Most common scenarios ::
+
+a. Success
+b. Failure
+
+Request - Response Model (theory) :: http/https:  Communication Architecture (REST) :: http/https verbs [get/post/put/delete] --> packet transfers [<header> + <body>]
+
+How do we communicate with the server side :: How do we know which link to access for fetching the data (Get) OR for posting the data (POST/Put)
+
+Class C IP Address : 192.168.x.x --> local network
+ftp server : ftp://address
+telnet :: /ssh server
+
+1. https://protect-eu.mimecast.com/s/kX7PCymK4I2yxrNSN8CJL?domain=brillio.com - URL [Uniform Resource Locator]
+
+http/s : protocols
+www : pointer to internet :: pointing to Class A IP address
+brillio.com  : domain name
+
+2. https://protect-eu.mimecast.com/s/hZpyCmErzUPROj5TnPzNt?domain=brillio.com - URI [Uniform Resource Identifier]
+
+http/s : protocols
+www : pointer to internet :: pointing to Class A IP address
+brillio.com  : domain name
+
+hrms : controller
+account_id : action
+001 : resource_id
+
+URI = <url>:/<controller>:/actions:/<resource_id>
+
+Resource ID : 
+
+name | age ---> CRUD
+R1 : id1 : Sumit 12
+R2 : id2 : Dishant 15
+R3 : id3 : Patnam 20
+
+1. Create a new record set :
+
+http verb : put/post
+read verb : get
+Update : put/post
+delete verb : delete
+
+UI --> 
+
+If there is NO UI in request - response OR 3rd parties : UPI paytm --<delete> Bank account : http/s communication :: URI :: API 
+
+
+1993 --> Tim Berners Lee (author of Web/Internet/HTML) : Wanted a concept : each resource on the web should be uniquely identified [each resource - links/textbox/button/image/file/server address/etc] : REST Architecture
+
+USA : Unique Identifier : SSN
+
+India : Aadhar Number
+
+EOD today :: What will be your project topic :: Individual contribution 
+
+1. Select the topic - Any || Monday,Tuesday 6/7th June :: Time available
+2. Design some use cases + Responsibilities (excel doc)
+3. Each team should mention :: What is the work done by individual team member
+
+--> Bit related to DB or Net/http or Concurrency
+
+https://protect-eu.mimecast.com/s/dPVyCnzvAs3687GT3tcNC?domain=careerkarma.com
+
+Scan Github :: check for Go projects : fork the project --> make modifications
+
+https://protect-eu.mimecast.com/s/xliaCoOwBuPKOrXTkVh16?domain=github.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
