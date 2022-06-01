@@ -1,1 +1,352 @@
 
+
+package main
+import "fmt"
+//the package to be created
+import "calculation"
+
+func main() {  
+	x,y := 15,10
+	//the package will have function Do_add()
+sum := calculation.Do_add(x,y)
+fmt.Println("Sum",sum) 
+}
+
+package calculation
+
+func Do_add(num1 int, num2 int)(int){
+
+sum := num1 + num2
+return sum
+
+}
+
+
+https://jogendra.dev/import-cycles-in-golang-and-how-to-deal-with-them
+
+
+1. Scenario 1: Cycle of dependency :: How to resolve & how to make the calls [2 packages vs 3 packages]
+
+a. https://jogendra.dev/import-cycles-in-golang-and-how-to-deal-with-them
+
+2. Scenario 2: Push the code [create the package] in Github --> Go install + Structure of the package in your local machine
+
+Package code: p.go --> /src 
+Main code : m.go --> /sample_gocode
+
+directed acyclic graph?
+
+package mgmt
+
+compiler design.... ?
+
+DAG [compiler designs/programs flow is considered/data engineering;large datasets/Big data :; control flows associated with data] : Directed Acyclic Graph :
+
+a. Compiler Design
+b. Visualizes the flow of basic blocks in the programs
+c. Within the blocks --> optimization techniques
+d. Type of data structure being used and use the transformations available within the blocks
+e. How the expressions/sub-expressions/how the statements
+
+Sub-expressions : C/C++/Rust/Perl/Python/Go
+
+- Expression within an expression 
+- Common implementations :: Regex [regular expressions]
+
+package main
+import "fmt"
+type Vertex struct {
+	X int
+	Y int
+}
+
+func main() {
+	v := Vertex{1, 2}
+	v.X = 4
+	fmt.Println(v.X)
+}
+dot philosophy
+
+Map in Go
+
+var map_variable map[key_data_type]value_data_type
+
+package main
+
+import "fmt"
+
+func main() {
+   var countryCapitalMap map[string]string
+   /* create a map*/
+   countryCapitalMap = make(map[string]string)
+   
+   /* insert key-value pairs in the map*/
+   countryCapitalMap["France"] = "Paris"
+   countryCapitalMap["Italy"] = "Rome"
+   countryCapitalMap["Japan"] = "Tokyo"
+   countryCapitalMap["India"] = "New Delhi"
+   
+   /* print map using keys*/
+   for country := range countryCapitalMap {
+      fmt.Println("Capital of",country,"is",countryCapitalMap[country])
+   }
+   
+   /* test if entry is present in the map or not*/
+   capital, ok := countryCapitalMap["United States"]
+   
+   /* if ok is true, entry is present otherwise entry is absent*/
+   if(ok){
+      fmt.Println("Capital of United States is", capital)  
+   } else {
+      fmt.Println("Capital of United States is not present") 
+   }
+}
+
+countryCapitalMap = make(map[string]string)
+
+S3 :: In case of Map, is it possible to assign values (nil or zero or filled) without using "make"
+
+for country := range countryCapitalMap {
+      fmt.Println("Capital of",country,"is",countryCapitalMap[country])
+	  
+	  
+https://gobyexample.com/range
+
+Range :
+
+a. Can work with multiple different types of data structures
+
+b. Work with both arrays & slices
+
+c. Range works with maps [keys & key-values]
+
+List of students : 
+
+1. Name_of_student Age_of_Student
+2. Create the map  : enter 3 set of values
+3. Check for the age of the 4th student :: verify if the age is greater than or less than 15
+
+
+package main
+import "fmt"
+
+func main(){
+
+li := map[int]string{
+22:"vishnu",
+24:"balay",
+35:"ravi",
+}
+
+for k,v :=range li{
+if k>15{
+fmt.Println("greater",v)
+}else
+{
+fmt.Println("lesser",v)
+}
+}
+}
+
+
+hm := map[string]int{
+		"Goose":    13,
+		"Maverick": 16,
+		"Rooster":  15,
+	}
+	hm["Fiona"] = 3
+
+	for key := range hm {
+		fmt.Printf("Student name %v and age %d\n", key, hm[key])
+	}
+
+	value, ok := hm["Fiona"]
+
+	if ok && value > 15 {
+		fmt.Println(value, ok)
+	} else {
+		fmt.Println("Value less than 15")
+	}
+	
+	
+package main
+
+import "fmt"
+
+func main() {
+   students := map[string]int{
+    "Imran":24,
+    "Ajay":23,
+    "Himansh":25,
+   }
+
+   students["Sumit"]=12
+   for name := range students {
+      fmt.Println("Age of",name,"is",students[name])
+   }
+   age, ok := students["Sumit"]
+
+   if(ok){
+      if(age>15){
+         fmt.Println("Greater", age)
+      } else {
+         fmt.Println("Less",age)
+      }
+   } else {
+      fmt.Println("Less")
+   }
+}
+
+package main
+
+import (
+	"fmt"
+	"math/rand"
+) 
+
+func main() {
+   var studentList map[string]int
+   studentList = make(map[string]int)
+   
+   
+   studentList["Madhu"] = 13
+   studentList["Dibya"] = 24
+   studentList["Sumith"] = 25
+   studentList["Flamo"] = rand.Intn(100)
+   
+   
+	if(studentList["Flamo"] > 15){
+		fmt.Println("Age is greater than 15")  
+	 } else {
+		fmt.Println("Age is less than 15")  
+	 }
+   
+   
+   
+   
+}
+
+package main
+
+import "fmt"
+
+func main() {   
+   /* create a map*/
+   countryCapitalMap := map[string] string {"France":"Paris","Italy":"Rome","Japan":"Tokyo","India":"New Delhi"}
+   
+   fmt.Println("Original map")   
+   
+   /* print map */
+   for country := range countryCapitalMap {
+      fmt.Println("Capital of",country,"is",countryCapitalMap[country])
+   }
+   
+   /* delete an entry */
+   delete(countryCapitalMap,"France");
+   fmt.Println("Entry for France is deleted")  
+   
+   fmt.Println("Updated map")   
+   
+   /* print map */
+   for country := range countryCapitalMap {
+      fmt.Println("Capital of",country,"is",countryCapitalMap[country])
+   }
+}
+
+CRUD methodology
+
+S4 : Delete a key, enter a new map element and update an exisisting value of a key + Have a map element with a constant value (check) ?
+S4 : Delete a key, enter a new map element and update an exisisting value of a key + Have a map "specific element/key " with a constant value (check) ? 
+
+Pass1 :
+Initial : K1...K5
+Delete : K1 
+Create : K6
+
+k4-"india" :: this value cannot be modified
+
+Pass2:
+
+K2 - "hello"
+Update k2 - "Brillio"
+From Sumit.Singh1 to Everyone 11:12 AM
+types of processing
+From Me to Everyone 11:12 AM
+Multi-threading
+From Patnam.Madhu to Everyone 11:12 AM
+parallel vs concurrency
+
+package main
+
+import (
+	"fmt"
+	"time"
+)
+
+func say(s string) {
+	for i := 0; i < 5; i++ {
+		time.Sleep(100 * time.Millisecond)
+		fmt.Println(s)
+	}
+}
+
+func main() {
+	go say("world")
+	say("hello")
+}
+
+go is running the say function in another thread
+other than the main thread
+
+https://golangbot.com/goroutines/
+
+main function terminated before the thread where hello is running completes
+
+main() : runs in its own GoRoutine called as main GoRoutine
+
+it does not know that it has to wait
+
+HTTP/HTTPS verbs
+
+GET PUT POST DELETE
+PATCH OPTIONS
+
+HTTP/HTTPS verbs : REST Architecture : 7 verbs : get/post/put/delete/patch/options/head
+
+headers
+body
+
+https://go.dev/doc/articles/wiki/
+Go :: Provides some packages :: net/http package
+https://pkg.go.dev/net/http
+
+callbacks to response and error
+defines task to do if api success or error
+
+http.PostForm
+
+1. https://www.brillio.com - URL [Uniform Resource Locator]
+
+http/s : protocols
+www : pointer to internet :: pointing to Class A IP address
+
+brillio.com  : domain name
+URI = <url>:/<controller>:/actions:/<resource_id>
+
+Tim Berners Lee
+father of w3
+
+https://careerkarma.com/blog/go-projects/
+EOD today :: What will be your project topic :: Individual contribution 
+
+1. Select the topic - Any || Monday, 6/7th June :: Time available
+2. Design some use cases + Responsibilities (excel doc)
+3. Each team should mention :: What is the work done by individual team member
+
+https://careerkarma.com/blog/go-projects/
+
+Scan Github :: check for Go projects : fork the project --> make modifications
+
+https://github.com/asciimoo/wuzz
+
+--> Bit related to DB or Net/http or Concurrency
