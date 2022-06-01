@@ -1,7 +1,7 @@
 package main
 
-import "calculator"
+import "fmt"
 
-func main() {
-	calculator.Calc()
+func main(){
+  fmt.Println("hello")
 }
