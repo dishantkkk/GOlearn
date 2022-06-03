@@ -15,7 +15,7 @@ func main() {
 	config := &aws.Config{
 		Region:   aws.String("us-west-2"),
 		Endpoint: aws.String("http://localhost:8000"),
-		Credentials : credentials.NewStaticCredentials("AKIAR2KJ6K3V5MCOTJIO", "xdnp49sH+sdqFiLXpH3kgUEAtMpKfa4s9r447P/d", "TOKEN"),
+		Credentials : credentials.NewStaticCredentials("AKI", "SKI", "TOKEN"),
 		
 	}
 
