@@ -1,0 +1,32 @@
+Pub-Sub Model : API's + MSA
+
+Junit
+
+SpringBoot : Junit/TestNg [Unit 
+
+Angular/React :: Jasmine JS + 
+
+. Go Test
+
+IDE 
+
+Types of stoarges :
+a. RDBMS
+b. MoSQL Data stores : MongoDB/Cassandra
+c. Object cache/In-memory caching
+d. File based storages [Amazon Web Services (AWS) - S3 [Simple Storage Services]]
+
+
+
+Efficiency: sequence of operations/steps; way the code is organized; grouping of the code units; state of the code
+
+Go :: What is the programming paradigm it uses : Multi-paradigm + Object Oriented + Concurrent Imperative
+
+
+1. Finish Go installation : go version
+2. Compiled vs Interpreted language
+3. Static Type Checks :: Static Language vs Dyanmic Language :: Java vs JavaScript
+4. Free account : github.com
+5. Git client in your local machine : git --version
+
+https://git-scm.com/downloads

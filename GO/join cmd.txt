@@ -1,0 +1,2 @@
+
+kubeadm join 68.183.95.172:6443 --token l7djw6.u7acqmlot52bth12 --discovery-token-ca-cert-hash sha256:b3299d723df51678642d8b751f74b5bedd3a12506101c86cda536b9819c39680 --cri-socket /run/cri-dockerd.sock

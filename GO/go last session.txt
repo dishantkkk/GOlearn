@@ -1,0 +1,445 @@
+From Dibya to Everyone 09:39 AM
+sess, err := session.NewSession(&aws.Config{
+    Region:      aws.String("us-west-2"),
+    Credentials: credentials.NewSharedCredentials("", "test-account"),
+})
+https://doncicuto.medium.com/getting-started-with-dynamodb-in-go-part-1-a25c5522edd4
+java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
+From Dibya to Everyone 09:45 AM
+java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
+From Sumit.Singh1 to Everyone 09:46 AM
+yes
+From Patnam.Madhu to Everyone 09:47 AM
+NoCredentialProviders: no valid providers in chain. Deprecated.
+        For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+I am trying to run the code
+From Sumit.Singh1 to Everyone 09:47 AM
+Initializing DynamoDB Local with the following configuration:
+Port:   8000
+InMemory:       false
+DbPath: null
+SharedDb:       true
+shouldDelayTransientStatuses:   false
+CorsParams:     *
+From Patnam.Madhu to Everyone 09:47 AM
+okay
+From Surendra Suthar to Everyone 09:47 AM
+surendra@Surendras-MBP dynamodb_local_latest % java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
+Initializing DynamoDB Local with the following configuration:
+Port:   8000
+InMemory:       false
+DbPath: null
+SharedDb:       true
+shouldDelayTransientStatuses:   false
+CorsParams:     *
+From Sumit.Singh1 to Everyone 09:48 AM
+{
+  TableDescription: {
+    AttributeDefinitions: [{
+        AttributeName: "year",
+        AttributeType: "N"
+      },{
+        AttributeName: "title",
+        AttributeType: "S"
+      }],
+    CreationDateTime: 2022-06-03 04:18:03.369 +0000 UTC,
+    ItemCount: 0,
+    KeySchema: [{
+        AttributeName: "year",
+        KeyType: "HASH"
+      },{
+        AttributeName: "title",
+        KeyType: "RANGE"
+      }],
+    ProvisionedThroughput: {
+      LastDecreaseDateTime: 1970-01-01 00:00:00 +0000 UTC,
+      LastIncreaseDateTime: 1970-01-01 00:00:00 +0000 UTC,
+      NumberOfDecreasesToday: 0,
+      ReadCapacityUnits: 10,
+      WriteCapacityUnits: 10
+    },
+    TableArn: "arn:aws:dynamodb:ddblocal:000000000000:table/Movies",
+    TableName: "Movies",
+    TableSizeBytes: 0,
+    TableStatus: "ACTIVE"
+  }
+}
+From Surendra Suthar to Everyone 09:53 AM
+{
+  TableDescription: {
+    AttributeDefinitions: [{
+        AttributeName: "year",
+        AttributeType: "N"
+      },{
+        AttributeName: "title",
+        AttributeType: "S"
+      }],
+    CreationDateTime: 2022-06-03 04:23:29.115 +0000 UTC,
+    ItemCount: 0,
+    KeySchema: [{
+        AttributeName: "year",
+        KeyType: "HASH"
+      },{
+        AttributeName: "title",
+        KeyType: "RANGE"
+      }],
+    ProvisionedThroughput: {
+      LastDecreaseDateTime: 1970-01-01 00:00:00 +0000 UTC,
+      LastIncreaseDateTime: 1970-01-01 00:00:00 +0000 UTC,
+      NumberOfDecreasesToday: 0,
+      ReadCapacityUnits: 10,
+      WriteCapacityUnits: 10
+    },
+    TableArn: "arn:aws:dynamodb:ddblocal:000000000000:table/Movies",
+    TableName: "Movies",
+    TableSizeBytes: 0,
+    TableStatus: "ACTIVE"
+  }
+}
+surendra@Surendras-MBP dynomodb %
+From Dibya to Everyone 09:54 AM
+go get github.com/aws/aws-sdk-go/aws - generic GoSDK of AWSs
+github.com/aws/aws-sdk-go/aws/session - Creating the sessions [Regions/Credentials/Profiles]
+github.com/aws/aws-sdk-go/service/dynamodb - DynamoDB specific package
+From Sumit.Singh1 to Everyone 09:57 AM
+key id
+secret key
+From Me to Everyone 09:57 AM
+keys
+From Sumit.Singh1 to Everyone 09:59 AM
+get the address to where this aws is stored?
+From Dibya to Everyone 09:59 AM
+&aws
+From Me to Everyone 09:59 AM
+referencing?
+From Dibya to Everyone 10:03 AM
+https://github.com/awsdocs/aws-doc-sdk-examples/blob/main/go/example_code/dynamodb/DynamoDBListTables.go
+From Sumit.Singh1 to Everyone 10:10 AM
+credentials.NewStaticCredentials…. credentials undeclared which package?
+credentials import error
+okii checking
+From Dibya to Everyone 10:11 AM
+awserr
+import "github.com/aws/aws-sdk-go/aws/credentials"
+https://docs.aws.amazon.com/sdk-for-go/api/aws/credentials/
+From Me to Everyone 10:13 AM
+ResourceInUseException: Cannot create preexisting table
+worked
+config := &aws.Config{
+		Region:   aws.String("us-west-2"),
+		Endpoint: aws.String("http://localhost:8000"),
+		Credentials : credentials.NewStaticCredentials("AKID", "SECRET_KEY", "TOKEN"),
+		
+	}
+in import added -  "github.com/aws/aws-sdk-go/aws/credentials"
+From Sumit.Singh1 to Everyone 10:14 AM
+done
+From Patnam.Madhu to Everyone 10:16 AM
+{
+  TableDescription: {
+    AttributeDefinitions: [{
+        AttributeName: "year",
+        AttributeType: "N"
+      },{
+        AttributeName: "title",
+        AttributeType: "S"
+      }],
+    CreationDateTime: 2022-06-03 04:44:49.09 +0000 UTC,
+    ItemCount: 0,
+    KeySchema: [{
+        AttributeName: "year",
+        KeyType: "HASH"
+      },{
+        AttributeName: "title",
+        KeyType: "RANGE"
+      }],
+    ProvisionedThroughput: {
+      LastDecreaseDateTime: 1970-01-01 00:00:00 +0000 UTC,
+      LastIncreaseDateTime: 1970-01-01 00:00:00 +0000 UTC,
+      NumberOfDecreasesToday: 0,
+      ReadCapacityUnits: 10,
+      WriteCapacityUnits: 10
+    },
+    TableArn: "arn:aws:dynamodb:ddblocal:000000000000:table/Movies",
+    TableName: "Movies",
+    TableSizeBytes: 0,
+    TableStatus: "ACTIVE"
+  }
+}
+From Sumit.Singh1 to Everyone 10:16 AM
+""
+From Dibya to Everyone 10:23 AM
+https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/go/dynamodb]
+https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/go
+GoSDK AWS - DynamoDB : https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/go/dynamodb
+
+GoSDK AWS Services : https://github.com/awsdocs/aws-doc-sdk-examples/tree/main/go
+ProvisionedThroughput
+From Surendra Suthar to Everyone 10:24 AM
+amount of capacity consume from a table
+From Dibya to Everyone 10:26 AM
+ProvisionedThroughput : What is this concept?
+
+--> Read/write activities :: How much of the capacity can be maximum consumed by the applications
+From Patnam.Madhu to Everyone 10:34 AM
+what if the read capacity reaches more than 10
+got it sir
+From Dibya to Everyone 10:38 AM
+import "github.com/aws/aws-sdk-go/aws/awserr"
+https://docs.aws.amazon.com/sdk-for-go/api/aws/awserr/
+https://github.com/markuscraig/dynamodb-examples/tree/master/go
+From Patnam.Madhu to Everyone 10:39 AM
+yes
+From Surendra Suthar to Everyone 10:39 AM
+Yes
+From Dibya to Everyone 10:40 AM
+movies_create_table.go
+//EndPoint: aws.String("https://dynamodb.us-east-1.amazonaws.com"),
+From Patnam.Madhu to Everyone 10:40 AM
+accessing DynamoDB
+?
+From Me to Everyone 10:43 AM
+yes
+From Dibya to Everyone 10:49 AM
+Amazon Resource Name (ARN)
+Amazon Resource Name (ARN) :: "Every" resource that is created in AWS, will have a unique identifier :: ARN
+https://github.com/markuscraig/dynamodb-examples/blob/master/go/movies_delete_table.go
+From Surendra Suthar to Everyone 10:50 AM
+surendra@Surendras-MBP dynomodb % go run delete.go 
+Deleting 'Movies' table...
+Response = {
+  TableDescription: {
+    AttributeDefinitions: [{
+        AttributeName: "year",
+        AttributeType: "N"
+      },{
+        AttributeName: "title",
+        AttributeType: "S"
+      }],
+    CreationDateTime: 2022-06-03 04:23:29.115 +0000 UTC,
+    ItemCount: 0,
+    KeySchema: [{
+        AttributeName: "year",
+        KeyType: "HASH"
+      },{
+        AttributeName: "title",
+        KeyType: "RANGE"
+      }],
+    ProvisionedThroughput: {
+      LastDecreaseDateTime: 1970-01-01 00:00:00 +0000 UTC,
+      LastIncreaseDateTime: 1970-01-01 00:00:00 +0000 UTC,
+      NumberOfDecreasesToday: 0,
+      ReadCapacityUnits: 10,
+      WriteCapacityUnits: 10
+    },
+    TableArn: "arn:aws:dynamodb:ddblocal:000000000000:table/Movies",
+    TableName: "Movies",
+    TableSizeBytes: 0,
+    TableStatus: "ACTIVE"
+  }
+}
+From Me to Everyone 10:52 AM
+done
+yes creating
+From Surendra Suthar to Everyone 10:52 AM
+{
+  TableDescription: {
+    AttributeDefinitions: [{
+        AttributeName: "year",
+        AttributeType: "N"
+      },{
+        AttributeName: "title",
+        AttributeType: "S"
+      }],
+    CreationDateTime: 2022-06-03 05:22:18.06 +0000 UTC,
+    ItemCount: 0,
+    KeySchema: [{
+        AttributeName: "year",
+        KeyType: "HASH"
+      },{
+        AttributeName: "title",
+        KeyType: "RANGE"
+      }],
+    ProvisionedThroughput: {
+      LastDecreaseDateTime: 1970-01-01 00:00:00 +0000 UTC,
+      LastIncreaseDateTime: 1970-01-01 00:00:00 +0000 UTC,
+      NumberOfDecreasesToday: 0,
+      ReadCapacityUnits: 10,
+      WriteCapacityUnits: 10
+    },
+    TableArn: "arn:aws:dynamodb:ddblocal:000000000000:table/Movies",
+    TableName: "Movies",
+    TableSizeBytes: 0,
+    TableStatus: "ACTIVE"
+  }
+}
+From Patnam.Madhu to Everyone 10:52 AM
+its working
+From Dibya to Everyone 10:55 AM
+https://github.com/markuscraig/dynamodb-examples/blob/master/go/movies_load_data.go
+https://github.com/markuscraig/dynamodb-examples
+Data
+From Surendra Suthar to Everyone 10:57 AM
+Put item successful: 'Como agua para chocolate' (resp = '{
+
+}')
+Put item successful: 'Renoir' (resp = '{
+
+}')
+Put item successful: 'The Contract' (resp = '{
+
+}')
+Put item successful: 'The Clinic' (resp = '{
+
+}')
+Put item successful: 'Little Black Book' (resp = '{
+
+}')
+Done
+From Me to Everyone 10:58 AM
+done
+From Patnam.Madhu to Everyone 10:58 AM
+still trying
+From Surendra Suthar to Everyone 10:59 AM
+Insert?
+From Sumit.Singh1 to Everyone 10:59 AM
+insert/update both?
+From Surendra Suthar to Everyone 11:00 AM
+Creates a new item
+From Dibya to Everyone 11:03 AM
+DynamoDB :: Attributes :: CRUD Operations :
+
+- PutItem
+- GetItem
+- UpdateItem
+- DeleteItem
+
+DynamoDB : CRUD operations:
+
+- BatchGetItem : Read upto 100 items from one or more tables
+- BatchWriteItem : Create or delete upto 25 items from one or more tables
+From Surendra Suthar to Everyone 11:05 AM
+Movie: 'Return to Oz' (1985)
+Movie: 'Rocky IV' (1985)
+Movie: 'Runaway Train' (1985)
+Movie: 'Silverado' (1985)
+Movie: 'St. Elmo's Fire' (1985)
+Movie: 'Teen Wolf' (1985)
+Movie: 'The Black Cauldron' (1985)
+Movie: 'The Breakfast Club' (1985)
+Movie: 'The Color Purple' (1985)
+Movie: 'The Goonies' (1985)
+Movie: 'The Last Dragon' (1985)
+Movie: 'The Return of the Living Dead' (1985)
+Movie: 'Weird Science' (1985)
+Movie: 'Witness' (1985)
+From Me to Everyone 11:06 AM
+done
+From Surendra Suthar to Everyone 11:08 AM
+same
+Sorry error
+From Me to Everyone 11:08 AM
+.\movies_qyery_year.go:55:8: undefined: dynamodbattribute
+From Surendra Suthar to Everyone 11:08 AM
+"dynamodbattribute": Unknown word.cSpell
+From Patnam.Madhu to Everyone 11:08 AM
+# command-line-arguments
+.\dynamoDBquery.go:56:8: undefined: dynamodbattribute
+its an error
+From Me to Everyone 11:08 AM
+yes
+From Surendra Suthar to Everyone 11:09 AM
+57
+From Patnam.Madhu to Everyone 11:09 AM
+55
+From Surendra Suthar to Everyone 11:10 AM
+yeah
+conversions
+From Dibya to Everyone 11:10 AM
+https://pkg.go.dev/strconv
+From Dibya to Everyone 11:20 AM
+Will start at 11.30
+From Dibya to Everyone 11:30 AM
+Back
+From Patnam.Madhu to Everyone 11:30 AM
+yes
+From Surendra Suthar to Everyone 11:30 AM
+Yes
+From Patnam.Madhu to Everyone 11:31 AM
+battery about to die sir
+From Surendra Suthar to Everyone 11:31 AM
+Discussed but not yet
+From Patnam.Madhu to Everyone 11:31 AM
+no they haven't
+From Sumit.Singh1 to Everyone 11:32 AM
+manual/cli
+From Surendra Suthar to Everyone 11:32 AM
+I used Kubernetes docker
+EKS service
+From Dibya to Everyone 11:40 AM
+3. Lambda is NOT free : aws.amazon.com/free
+https://aws.amazon.com/lambda/?did=ft_card&trk=ft_card
+From Me to Everyone 11:43 AM
+cloudwatch
+From Dibya to Everyone 11:47 AM
+AWS : In-built monitoring tool :: Cloudwatch :: Mixed services [free/paid]
+AWS Lambda :: Platform that it supports :
+
+- Java
+- NodeJS
+- Python
+- Go
+- Ruby
+- C#
+From Me to Everyone 11:53 AM
+yaml
+properties
+From Dibya to Everyone 11:59 AM
+Template Config : Cloud Template :: AWS CloudFormation : YAML/JSON
+https://github.com/amazon-archives/serverless-app-examples/blob/master/javascript/hello-world/index.js
+From Dibya to Everyone 12:11 PM
+https://www.section.io/engineering-education/serverless-functions-faas-with-aws-lambda-and-golang/
+lambda.Start
+From Sumit.Singh1 to Everyone 12:13 PM
+code ?
+From Surendra Suthar to Everyone 12:13 PM
+Maybe code
+From Me to Everyone 12:13 PM
+only main after building?
+From Dibya to Everyone 12:16 PM
+Lambda :: Zip file : main code base OR something else :: Upload the Build file
+Lambda :: Zip file : main code base OR something else :: Upload the Build file
+
+Deploy my app/project :: source code + test code + artifacts + 3rd party packages + config
+--> Source Code 
+--> Lambda package
+--> Deployment env :: (AWS Lambda) -> linux env
+--> Build file --> linux env --> .zip
+From Dibya to Everyone 12:24 PM
+https://docs.aws.amazon.com/lambda/latest/dg/lambda-golang.html
+https://github.com/awsdocs/aws-lambda-developer-guide/tree/main/sample-apps/blank-go
+From Surendra Suthar to Everyone 12:29 PM
+Nice session!
+Please share recording
+From Dibya to Everyone 12:29 PM
+Thank You
+From Me to Everyone 12:29 PM
+Great session! Learned a lot!
+From Sumit.Singh1 to Everyone 12:29 PM
+thank you sir :) Madhu also said to convey gratitude :)
+From Surendra Suthar to Everyone 12:29 PM
+Received
+From Me to Everyone 12:29 PM
+Received some
+From Dibya to Everyone 12:29 PM
+Subas Panda
+From Surendra Suthar to Everyone 12:29 PM
+Latest recording not yet
+From Me to Everyone 12:29 PM
+yeah
+From Surendra Suthar to Everyone 12:29 PM
+Thank you
+From Me to Everyone 12:30 PM
+Thank you!
+From Sumit.Singh1 to Everyone 12:30 PM
+thank you sir tc :)
